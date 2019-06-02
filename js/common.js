@@ -2,6 +2,24 @@ $(document).ready(function () {
 
   // Slow loading of the page
   $('.bg_container').animate({opacity: '1'}, 1500);
+  //----------------------------------------------------
+
+  //Header menu responsice
+ // Header menu toggled by burger
+  $('#header_burger').click(function() { 
+    $('.header__menu_list').toggleClass('responsive');
+    $('#header_burger span').toggleClass('active');
+  });
+
+  // Header menu close by clicking outside
+  $(document).mouseup(function (e) { // by the click out of popup 
+    let menu = $('.header__menu');
+    if ($('.header__menu_list').hasClass('responsive') && e.target != menu[0] && menu.has(e.target).length == 0) {
+      $('.header__menu_list').removeClass('responsive');
+      $('#header_burger span').removeClass('active');
+    }
+  });
+  //------------------------------------------------------------------------------------------------------------------
 
   //----------------------------------------------
   // Third block trainer slider

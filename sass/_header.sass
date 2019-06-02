@@ -1,25 +1,24 @@
 .header
-  // display: block
-  padding-top: 2.9em
+  padding-top: 1.7em
   width: 100%
-  height: 200em
-  position: relative
-  &:before
-    position: absolute
-    content: ''
-    display: block
-    width: 112em
-    height: 130em
-    background-image: url('../img/bg/polygon.svg')
-    background-repeat: no-repeat
-    top: -53em
-    left: 50%
-    transform: translateX(-13.5em)
+
+  // Col paddings
+  &__nav, &__logo, &__tel, &__mainScreen
+    padding: 0
+
+  // Header Top Block
+  &__top
+    margin-bottom: 9.2em
+  
   &__menu
     display: flex
     align-items: center
+    &_toggle
+      opacity: 0
+      display: none
+      transition: 0.5s
   &__burger 
-    display: block
+    display: none
     width: 3.6em
     height: 2em
     margin: 0 3.5em 0 0
@@ -49,8 +48,8 @@
         transition: 0.2s
     &:hover
       cursor: pointer
-      span:after
-        width: 3.6em
+    span.active:after
+      width: 3.6em
 
   &__menu
     &_list
@@ -60,10 +59,177 @@
       justify-content: flex-start
     &_item
       &:not(:last-child)
-        margin: 0 3.5em 0 0
+        margin: 0 3.1em 0 0
     &_link
       +lato_regular
       font-size: 1.8em
       color: $color-white
+      letter-spacing: 0.03em
       &:hover
-        color: $color-white
+        color: $color-white        
+
+  &__logo
+    display: flex
+    justify-content: flex-end
+    &_img
+      margin: 0 4.8em 0 0
+  &__tel
+    display: flex
+    justify-content: flex-end
+  &__phone
+    +lato_regular
+    font-size: 2.1em
+    color: $color-white
+    &:hover
+      color: $color-white
+
+
+  // Main screen
+  &__mainScreen
+    &_title
+      +amazing_grotesk_demi
+      font-size: 6.4em
+      color: $color-white
+      margin-bottom: 0.01em
+      text-align: end
+    &_subtitle
+      color: $color-white
+      font-size: 2.14em
+      margin-bottom: 1.6em
+      text-align: end
+    &_description
+      color: $color-white
+      font-size: 2.12em
+      text-align: end
+      margin-bottom: 3.8em
+    &_call
+      display: flex
+      justify-content: flex-end
+    &_link
+      width: 12.4em
+
+@media (max-width: 1200px)
+  .header
+    &__top
+      margin-bottom: 6em
+@media (max-width: 1280px)
+  .header
+    &__burger
+      margin: 0 2em 0 0
+    &__menu
+      &_item
+        &:not(:last-child)
+          margin: 0 1em 0 0
+      &_link
+        letter-spacing: 0
+
+@media (max-width: 1200px)
+  .header
+    &__logo
+      &_img
+        margin: 0 0 1em
+
+@media (max-width: 810px)
+  .header
+    &__burger
+      display: block
+    &__menu
+      &_item
+        display: none
+
+
+@media (max-width: 800px)
+  .header
+    &__logo
+      &_img
+        width: 12em
+        height: auto
+        margin: 0 0 0.4em
+    &__phone
+      font-size: 1.8em
+
+@media (max-width: 640px)
+  .header
+    &__mainScreen
+      &_title, &_subtitle, &_description
+        text-align: center
+      &_call
+        justify-content: center
+
+@media (max-width: 620px)
+  .header
+    &__mainScreen
+      &_title
+        font-size: 5.6em
+      &_subtitle, &_description
+        font-size: 2em
+
+@media (max-width: 556px)
+  .header
+    &__mainScreen
+      &_title
+        font-size: 5em
+      &_subtitle, &_description
+        font-size: 1.6em
+
+@media (max-width: 494px)
+  .header
+    &__mainScreen
+      &_title
+        font-size: 4em
+
+@media (max-width: 404px)
+  .header
+    &__mainScreen
+      &_title
+        font-size: 3.6em
+
+@media (max-width: 374px)
+  .header
+    &__mainScreen
+      &_title
+        font-size: 3em
+
+@media (max-width: 354px)
+  .header
+    &__mainScreen
+      &_description
+        margin: 0 auto 3.6em
+        max-width: 12em
+
+@media (max-width: 420px)
+  .header
+    &__logo
+      &_img
+        width: 10em
+        height: auto
+        margin: 0 0 0.2em
+    &__phone
+      font-size: 1.4em
+
+//-------------------------------------------------------------
+// Header menu responsive
+@media (max-width: 810px)
+  .header
+    &__menu
+      position: relative
+    &__menu_list.responsive
+      display: block
+      position: absolute
+      top: 4em
+      padding: 2em 10em 2em 2em
+      background-color: #4A90BA
+      transition: 0.2s
+      border-radius: 0.5em
+      z-index: 5
+      box-shadow: 0.1em 0.2em 1.5em rgba(#000000, 0.3)
+    &__menu_list.responsive &__menu_item
+      display: block
+      margin: 0 0 1em
+      a
+        font-size: 2.2em
+@media (max-width: 366px)
+  .header
+    &__menu_list.responsive
+      padding: 2em 6em 2em 2em
+//------------------------------------------------------
