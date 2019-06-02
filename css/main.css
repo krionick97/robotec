@@ -361,7 +361,7 @@ ul li {
 
 @media (max-width: 1280px) {
   .header__burger {
-    margin: 1.2em 2em 0 0; }
+    margin: 1.7em 2em 0 0; }
   .header__menu_item:not(:last-child) {
     margin: 0 1em 0 0; } }
 
@@ -427,8 +427,10 @@ ul li {
 @media (max-width: 420px) {
   .header__logo_img {
     width: 10em;
-    height: 4.2em;
+    height: 3.8em;
     margin: 0 0 0.2em; }
+  .header__burger {
+    margin: 1.4em 2em 0 0; }
   .header__phone {
     font-size: 1.4em; } }
 
