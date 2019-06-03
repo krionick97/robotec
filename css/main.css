@@ -410,13 +410,19 @@ ul li {
     font-size: 1.6em; } }
 
 @media (max-width: 640px) {
-  .header__mainScreen_title, .header__mainScreen_subtitle, .header__mainScreen_description {
-    text-align: center; }
-  .header__mainScreen_call {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; } }
+  .header {
+    margin-bottom: 36em; }
+    .header__top {
+      margin-bottom: 12em; }
+    .header__mainScreen_title, .header__mainScreen_subtitle, .header__mainScreen_description {
+      text-align: center; }
+    .header__mainScreen_description {
+      margin-bottom: 6em; }
+    .header__mainScreen_call {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 @media (max-width: 494px) {
   .header__mainScreen_title {
@@ -483,7 +489,8 @@ ul li {
     font-family: 'Amazing Grotesk Demi', sans-serif;
     font-size: 4em;
     text-align: center;
-    margin-bottom: 4.1em; }
+    margin: 0 auto 4.1em;
+    max-width: 90%; }
   .lessons__block {
     display: -webkit-box;
     display: -webkit-flex;
@@ -648,6 +655,111 @@ ul li {
       -webkit-transform: translate(8.5em, 25.5em);
           -ms-transform: translate(8.5em, 25.5em);
               transform: translate(8.5em, 25.5em); }
+
+/* -------------------------------------------------------------------------- */
+/* Lessons Responsive */
+@media (max-width: 1400px) {
+  .lessons__title {
+    margin: 0 auto 3em; }
+  .lessons__cards {
+    margin-bottom: 16em; }
+  .lessons__img_tools, .lessons__img_blender {
+    width: 55em;
+    height: 38em; }
+  .lessons__img_znatok, .lessons__img_tools {
+    -webkit-transform: translateX(0.5em);
+        -ms-transform: translateX(0.5em);
+            transform: translateX(0.5em); }
+  .lessons__img_radio, .lessons__img_blender {
+    -webkit-transform: translateX(-0.5em);
+        -ms-transform: translateX(-0.5em);
+            transform: translateX(-0.5em); }
+  .lessons__text_znatok, .lessons__text_tools {
+    -webkit-transform: translateX(-0.5em);
+        -ms-transform: translateX(-0.5em);
+            transform: translateX(-0.5em); }
+  .lessons__text_radio, .lessons__text_blender {
+    -webkit-transform: translateX(0.5em);
+        -ms-transform: translateX(0.5em);
+            transform: translateX(0.5em); }
+  .lessons__znatok:before, .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
+    -webkit-background-size: contain;
+            background-size: contain; }
+  .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
+    width: 54em;
+    height: 60em; }
+  .lessons__radio:before {
+    -webkit-transform: translate(28em, 0);
+        -ms-transform: translate(28em, 0);
+            transform: translate(28em, 0); }
+  .lessons__tools:before, .lessons__blender:before {
+    -webkit-transform: translate(26em, 10em);
+        -ms-transform: translate(26em, 10em);
+            transform: translate(26em, 10em); } }
+
+@media (max-width: 1180px) {
+  .lessons__img_radio {
+    background-position-x: 0.01em; }
+  .lessons__card {
+    width: 44em;
+    height: 28em; }
+  .lessons__text {
+    padding: 4em 4em; }
+  .lessons__itemTitle {
+    font-size: 2.6em;
+    margin-bottom: 0.8em; }
+  .lessons__itemDescription {
+    font-size: 2.2em; }
+  .lessons__znatok:before, .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
+    width: 54em;
+    height: 60em; }
+  .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
+    width: 54em;
+    height: 50em; } }
+
+@media (max-width: 920px) {
+  .lessons__cards {
+    display: block; }
+    .lessons__cards:not(:last-child) {
+      margin-bottom: 8em; }
+  .lessons__card {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+  .lessons__img_radio, .lessons__img_blender {
+    -webkit-transform: translateY(-0.4em);
+        -ms-transform: translateY(-0.4em);
+            transform: translateY(-0.4em); }
+  .lessons__text_znatok, .lessons__text_radio, .lessons__text_tools, .lessons__text_blender {
+    margin-top: 0; }
+  .lessons__text_znatok, .lessons__text_tools {
+    -webkit-transform: translateY(-2em);
+        -ms-transform: translateY(-2em);
+            transform: translateY(-2em); }
+  .lessons__text_radio, .lessons__text_blender {
+    -webkit-transform: translateY(2em);
+        -ms-transform: translateY(2em);
+            transform: translateY(2em); } }
+
+@media (max-width: 510px) {
+  .lessons__card {
+    width: 30em;
+    height: 22em; }
+  .lessons__text {
+    padding: 2.6em; }
+  .lessons__itemTitle {
+    font-size: 2.2em;
+    margin-bottom: 0.6em; }
+  .lessons__itemDescription {
+    font-size: 1.6em; } }
+
+@media (max-width: 480px) {
+  .lessons__title {
+    font-size: 3em; } }
+
+@media (max-width: 360px) {
+  .lessons__title {
+    font-size: 2.6em; } }
 
 @media (max-width: 1340px) {
   .row-padding {

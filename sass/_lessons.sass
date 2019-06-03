@@ -4,7 +4,8 @@
     +amazing_grotesk_demi
     font-size: 4em
     text-align: center
-    margin-bottom: 4.1em
+    margin: 0 auto 4.1em
+    max-width: 90%
 
   /* Block of cards */
   &__block
@@ -137,3 +138,103 @@
       bottom: 0
       transform: translate(8.5em, 25.5em)
 
+/* -------------------------------------------------------------------------- */
+/* Lessons Responsive */
+@media (max-width: 1400px)
+  .lessons
+    &__title
+      margin: 0 auto 3em
+    &__cards
+      margin-bottom: 16em
+    &__img
+      &_tools, &_blender
+        width: 55em
+        height: 38em
+      &_znatok, &_tools
+        transform: translateX(0.5em)
+      &_radio, &_blender
+        transform: translateX(-0.5em)
+    &__text
+      &_znatok, &_tools
+        transform: translateX(-0.5em)
+      &_radio, &_blender
+        transform: translateX(0.5em)
+    &__znatok, &__radio, &__tools, &__blender
+      &:before
+        background-size: contain
+    &__radio, &__tools, &__blender
+      &:before
+        width: 54em
+        height: 60em
+    &__radio
+      &:before
+        transform: translate(28em, 0)
+    &__tools, &__blender
+      &:before
+        transform: translate(26em, 10em)
+
+@media (max-width: 1180px)
+  .lessons
+    &__img
+      &_radio
+        background-position-x: 0.01em
+    &__card
+      width: 44em
+      height: 28em
+    &__text
+      padding: 4em 4em
+    &__itemTitle
+      font-size: 2.6em
+      margin-bottom: 0.8em
+    &__itemDescription
+      font-size: 2.2em
+    &__znatok, &__radio, &__tools, &__blender
+      &:before
+        width: 54em
+        height: 60em
+    &__radio, &__tools, &__blender
+      &:before
+        width: 54em
+        height: 50em
+
+@media (max-width: 920px)
+  .lessons
+    &__cards
+      display: block
+      &:not(:last-child)
+        margin-bottom: 8em
+    &__card
+      transform: translateX(0)
+    &__img
+      &_radio, &_blender
+        transform: translateY(-0.4em)
+    &__text
+      &_znatok, &_radio, &_tools, &_blender
+        margin-top: 0
+      &_znatok, &_tools
+        transform: translateY(-2em)
+      &_radio, &_blender
+        transform: translateY(2em)
+
+@media (max-width: 510px)
+  .lessons
+    &__card
+      width: 30em
+      height: 22em
+    &__text
+      padding: 2.6em
+    &__itemTitle
+      font-size: 2.2em
+      margin-bottom: 0.6em
+    &__itemDescription
+      font-size: 1.6em
+
+@media (max-width: 480px)
+  .lessons
+    &__title
+      font-size: 3em
+
+@media (max-width: 360px)
+  .lessons
+    &__title
+      font-size: 2.6em
