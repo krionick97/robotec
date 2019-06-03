@@ -1,0 +1,139 @@
+/* Lessons block */
+.lessons
+  &__title
+    +amazing_grotesk_demi
+    font-size: 4em
+    text-align: center
+    margin-bottom: 4.1em
+
+  /* Block of cards */
+  &__block
+    display: flex
+    align-items: center
+    flex-direction: column
+  &__cards
+    display: flex
+  &__card
+    width: 55em
+    height: 38em
+    border-radius: 2.6em
+    box-shadow: 0.1em 0.1em 3.6em rgba($color-blue-text, 0.2)
+  &__img
+    background-repeat: no-repeat
+    overflow: hidden
+    background-size: cover
+    &_znatok
+      z-index: 2
+      transform: translateX(4.3em)
+      background-image: url('../img/photo/znatok.jpg')
+      background-position-y: 54%
+      background-position-x: 0.01em
+    &_radio
+      z-index: 1
+      transform: translateX(-0.4em)
+      background-image: url('../img/photo/radio.jpg')
+      background-position-x: -0.9em
+    &_tools
+      z-index: 1
+      transform: translateX(2.9em)
+      background-image: url('../img/photo/tools.jpg')
+      background-position-x: 0.1em
+      width: 72.4em
+      height: 49.4em
+    &_blender
+      z-index: 1
+      transform: translateX(1.5em)
+      background-image: url('../img/photo/blender.png')
+      background-position-x: -5em
+      width: 63em
+      height: 41em
+
+  &__itemTitle
+    +lato_bold
+    font-size: 2.8em
+    margin-bottom: 1.3em
+  &__itemDescription
+    +lato_light
+    font-size: 2.4em
+    max-width: 17em
+    line-height: 1.3
+  &__text
+    background-color: $color-white
+    padding: 6.9em 6.1em    
+    &_znatok
+      z-index: 1
+      transform: translateX(3.6em)
+      margin-top: 12em
+    &_radio
+      z-index: 2
+      margin-top: 12.6em
+      transform: translateX(1em)
+    &_tools
+      z-index: 2
+      margin-top: 2.6em
+      transform: translateX(1.6em)
+    &_blender
+      z-index: 2
+      margin-top: 7.7em
+      transform: translateX(3.8em)
+
+  &__znatok
+    position: relative
+    margin-bottom: 22em
+    &:before
+      position: absolute
+      content: ''
+      display: block  
+      width: 74em
+      height: 74em
+      background-image: url('../img/bg/znatok_poligon.svg')
+      background-repeat: no-repeat
+      left: 0
+      bottom: 0
+      transform: translate(7.9em, 7em)
+
+  &__radio
+    position: relative
+    margin-bottom: 24em
+    &:before
+      position: absolute
+      content: ''
+      display: block  
+      width: 74em
+      height: 80em
+      background-image: url('../img/bg/radio_poligon.svg')
+      background-repeat: no-repeat
+      left: 0
+      bottom: 0
+      transform: translate(34em, 16em)
+
+  &__tools
+    position: relative
+    margin-bottom: 22.5em
+    &:before
+      position: absolute
+      content: ''
+      display: block  
+      width: 74em
+      height: 80em
+      background-image: url('../img/bg/tools_poligon.svg')
+      background-repeat: no-repeat
+      left: 0
+      bottom: 0
+      transform: translate(30.5em, 18.5em)
+
+  &__blender
+    position: relative
+    margin-bottom: 24em
+    &:before
+      position: absolute
+      content: ''
+      display: block  
+      width: 74em
+      height: 80em
+      background-image: url('../img/bg/blender_poligon.svg')
+      background-repeat: no-repeat
+      left: 0
+      bottom: 0
+      transform: translate(8.5em, 25.5em)
+

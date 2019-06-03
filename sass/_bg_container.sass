@@ -1,8 +1,9 @@
+/* Bg_container */
 .bg_container
   margin: 0 auto
   max-width: 192em
   overflow: hidden
-  height: 200em
+  height: 1000em  // !!!! Не забыть потом убрать
   width: 100%
   opacity: 0
   background-image: url(../img/bg/main_bg.png)
@@ -21,7 +22,9 @@
     top: -53em
     left: 50%
     transform: translateX(-13.5em)
+/* --------------------------------------------- */
 
+/* Bg_container responsive */
 @media (max-width: 1380px)
   .bg_container
     &:before
@@ -99,4 +102,4 @@
     &:before
       left: 0
       transform: translateX(-43%)
-
+/*--------------------------------------------------------------------------------*/
