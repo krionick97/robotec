@@ -1,0 +1,136 @@
+/* ---------------------------------------------------------------------- */
+/* Features Block */
+.features
+  &__title
+    +amazing_grotesk_demi
+    font-size: 4em
+    max-width: 90%
+    text-align: center
+    margin: 0 auto 3.1em
+  &__block
+    margin: 0 auto 8em
+  
+  &__text
+    position: absolute
+    z-index: 2
+    +lato_black
+    font-size: 2.2em
+    max-width: 6em
+    top: 0
+    left: 0
+    &_fiveYears
+      transform: translate(1.6em, 2.6em)
+    &_100students
+      transform: translate(2.7em, 2.7em)
+    &_minigroup
+      transform: translate(4em, 2.4em)
+    &_topPlaces, &_famAtm, &_courses
+      max-width: 16em
+    &_topPlaces
+      transform: translate(0, 2.3em)
+    &_famAtm
+      transform: translate(5.5em, 4.8em)
+    &_courses
+      transform: translate(1.4em, 4.8em)
+    &_teachers
+      transform: translate(6em, 3.4em)
+
+  &__bgmark
+    position: relative
+    z-index: 1
+    display: inline-block
+    &_100students
+      transform: translate(-6em, 0)
+    &_minigroup
+      transform: translate(-3em, 0)
+    &_topPlaces
+      transform: translate(0.5em, -7em)
+    &_famAtm
+      left: 0
+      top: 0
+      transform: translate(12em, 0)
+      &-1
+        position: relative
+      &-2
+        position: absolute
+        bottom: -0.3em
+        left: 0
+        transform: translateX(-1em)
+    &_courses
+      transform: translate(2.7em, 0)
+      &-1
+        position: relative
+      &-2
+        position: absolute
+        bottom: -0.3em
+        left: 50%
+        transform: translateX(-8.7em)
+    &_teachers
+      transform: translateX(8em)
+/* ---------------------------------------------------------- */
+/* Features Responsive */
+@media (max-width: 1400px)
+  .features
+    &__text
+      // &_fiveYears
+        // transform: translate(1.6em, 2.6em)
+      &_teachers
+        transform: translate(7.8em, 3.4em)
+    &__bgmark
+      // &_fiveYears
+        // transform: translateX(15em)
+      &_teachers
+        transform: translateX(12em)
+
+@media (max-width: 1199px)
+  .features
+    &__block
+      display: flex
+      justify-content: center
+    &__100students
+      margin: 0 auto 14em
+    &__topPlaces
+      margin: 0 auto 4em
+    &__courses
+      margin: 0 auto 16em
+    &__text
+      position: static
+      &_fiveYears
+        transform: translate(-1.8em, 2.6em)
+      &_100students
+        transform: translate(-8.3em, 2.7em)
+      &_minigroup
+        transform: translate(-6.3em, 2.5em)
+      &_topPlaces
+        transform: translate(-11.8em, 2.2em)
+        max-width: 16em
+      &_famAtm
+        transform: translate(-5.5em, 7em)
+      &_minigroup
+        transform: translate(-3.7em, 2em)
+      &_courses
+        transform: translate(-17.1em, 6.9em)
+      &_topPlaces
+        transform: translate(-10.2em, 2.2em)
+      &_teachers
+        transform: translate(-1em, 5.8em)
+        
+    &__bgmark
+      position: static
+      &_famAtm
+        transform: translate(4em, 4.8em)
+      &_courses
+        transform: translate(1em, 4.8em)
+      &_minigroup
+        transform: translate(3em, -1em)
+      &_topPlaces
+        transform: translate(4em, -7em)
+      &_teachers
+        transform: translate(3em, 4.8em)
+
+@media (max-width: 992px)
+  .features
+    &__100students
+      margin: 0 auto 8em
+    &__minigroup
+      margin: 0 auto 15em
