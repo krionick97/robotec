@@ -22,31 +22,27 @@ $(document).ready(function () {
   //------------------------------------------------------------------------------------------------------------------
 
   //----------------------------------------------
-  // Third block trainer slider
-  // $('.third_block__slider').slick({
-  //   dots: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   // nextArrow: '<div class="arrow arrow_prev arrow_1 arrow_prev_1"></div>',
-  //   // prevArrow: '<div class="arrow arrow_next arrow_1 arrow_next_1"></div>',
-  //   dotsClass: 'dots dots1',
-  //   responsive: [
-  //     {
-  //       breakpoint: 992,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       }
-  //     },
-  //     // {
-  //     //   breakpoint: 995,
-  //     //   settings: {
-  //     //     slidesToShow: 1,
-  //     //     slidesToScroll: 1,
-  //     //   }
-  //     // }
-  //   ]
-  // });
+  // Reviews slider
+  var $status = $('.reviews__pagingInfo');
+  var $count = $('.reviews__count');
+  var $slickElement = $('.reviews__slider');
+
+  $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.text(i);
+    $count.text('/' + slick.slideCount);
+  });
+
+  $slickElement.slick({
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: '<div class="arrow arrow_next"></div>',
+    prevArrow: '<div class="arrow arrow_prev"></div>',
+    // dotsClass: 'dots',
+  });
 
   //-----------------------------------------------
   // Fourth block auto slider

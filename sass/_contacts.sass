@@ -1,0 +1,64 @@
+.contacts
+  margin-bottom: 25.5em
+  position: relative
+  &__title
+    max-width: 90%
+    margin: 0 auto
+    +lato_heavy
+    font-size: 3.6em
+    text-align: center
+  &__card
+    position: absolute
+    display: block
+    width: 113em
+    height: 58.9em
+    top: 11.4em
+    padding: 4em 7.2em 7.5em
+    left: 50%
+    transform: translateX(-56.5em)
+    border-radius: 2.6em
+    z-index: 2
+    background-color: $color-white
+    box-shadow: 0.1em 0.1em 4em rgba($color-blue-text, 0.3)
+    display: flex
+    justify-content: space-between
+    &_block
+      height: 100%
+      // width: 47.8em
+      // width: 45%
+    &_left
+      // background-color: red
+    &_right
+      // background-color: blue
+  &__logo
+    margin-bottom: 2.7em
+  &__data
+    display: flex
+    justify-content: space-between
+    margin-bottom: 2em
+  &__text
+    &:not(:first-child)
+      margin-top: 2.2em
+    a
+      color: $color-blue-text
+      &:hover
+        text-decoration-line: none
+  &__star
+    // margin: 0 1em 2.4em 0
+    margin: 0 1em 0 0
+    float: left
+  &__descr
+    +lato_regular
+    font-size: 1.8em
+    line-height: 1.16
+    max-width: 12em
+  &__link
+    &:hover
+      cursor: pointer
+  &__locate
+    margin: 0 0 0 1.6em
+  &__map
+    width: 47.8em
+    height: 28em
+    border-radius: 2.6em
+    background-color: green
