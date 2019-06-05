@@ -3,10 +3,9 @@
   margin: 0 auto
   max-width: 192em
   overflow: hidden
-  height: 1000em  // !!!! Не забыть потом убрать
+  // height: 1000em  // !!!! Не забыть потом убрать
   width: 100%
-  opacity: 0
-  background-image: url(../img/bg/main_bg.png)
+  background-image: url(../img/bg/main_bg_1.png)
   background-repeat: no-repeat
   background-position-x: 50%
   background-position-y: 0
@@ -25,6 +24,10 @@
 /* --------------------------------------------- */
 
 /* Bg_container responsive */
+@media (max-width: 1400px)
+  .bg_container
+    background-image: url(../img/bg/main_bg_2.png)
+
 @media (max-width: 1380px)
   .bg_container
     &:before
