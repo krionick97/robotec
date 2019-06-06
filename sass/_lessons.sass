@@ -21,6 +21,7 @@
     height: 38em
     border-radius: 2.6em
     box-shadow: 0.1em 0.1em 3.6em rgba($color-blue-text, 0.2)
+
   &__img
     background-repeat: no-repeat
     overflow: hidden
@@ -93,7 +94,10 @@
       background-repeat: no-repeat
       left: 0
       bottom: 0
-      transform: translate(7.9em, 7em)
+      transform: translate(7.9em, 7em) rotate(0)
+      transition-duration: $transition-duration
+    &:hover:before
+      transform: translate(7.9em, 7em) rotate(30deg)
 
   &__radio
     position: relative
@@ -108,7 +112,10 @@
       background-repeat: no-repeat
       left: 0
       bottom: 0
-      transform: translate(34em, 16em)
+      transform: translate(34em, 16em) rotate(0)
+      transition-duration: $transition-duration
+    &:hover:before
+      transform: translate(34em, 16em) rotate(30deg)
 
   &__tools
     position: relative
@@ -123,7 +130,10 @@
       background-repeat: no-repeat
       left: 0
       bottom: 0
-      transform: translate(30.5em, 18.5em)
+      transform: translate(30.5em, 18.5em) rotate(0)
+      transition-duration: $transition-duration
+    &:hover:before
+      transform: translate(30.5em, 18.5em) rotate(30deg)
 
   &__blender
     position: relative
@@ -138,7 +148,14 @@
       background-repeat: no-repeat
       left: 0
       bottom: 0
-      transform: translate(8.5em, 25.5em)
+      transform: translate(8.5em, 25.5em) rotate(0)
+      transition-duration: $transition-duration
+    &:hover:before
+      transform: translate(8.5em, 25.5em) rotate(30deg)
+  &__znatok, &__radio, &__tools, &__blender
+    &:before
+      background-size: contain
+
 
 /* -------------------------------------------------------------------------- */
 /* Lessons Responsive */
@@ -153,18 +170,6 @@
       &_tools, &_blender
         width: 55em
         height: 38em
-      &_znatok, &_tools
-        transform: translateX(0.5em)
-      &_radio, &_blender
-        transform: translateX(-0.5em)
-    &__text
-      &_znatok, &_tools
-        transform: translateX(-0.5em)
-      &_radio, &_blender
-        transform: translateX(0.5em)
-    &__znatok, &__radio, &__tools, &__blender
-      &:before
-        background-size: contain
     &__radio, &__tools, &__blender
       &:before
         width: 54em
@@ -172,9 +177,13 @@
     &__radio
       &:before
         transform: translate(28em, 0)
+      &:hover:before
+        transform: translate(28em, 0) rotate(30deg)
     &__tools, &__blender
       &:before
         transform: translate(26em, 10em)
+      &:hover:before
+        transform: translate(26em, 10em) rotate(30deg)
 
 @media (max-width: 1180px)
   .lessons
@@ -199,6 +208,18 @@
       &:before
         width: 54em
         height: 50em
+
+@media (max-width: 992px)
+  .lessons
+    &__znatok
+      &:hover:before
+        transform: translate(7.9em, 7em) rotate(0)
+    &__radio
+      &:hover:before
+        transform: translate(28em, 0) rotate(0)
+    &__tools, &__blender
+      &:hover:before
+        transform: translate(26em, 10em) rotate(0)
 
 @media (max-width: 920px)
   .lessons

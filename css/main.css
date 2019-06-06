@@ -634,9 +634,16 @@ ul li {
       background-repeat: no-repeat;
       left: 0;
       bottom: 0;
-      -webkit-transform: translate(7.9em, 7em);
-          -ms-transform: translate(7.9em, 7em);
-              transform: translate(7.9em, 7em); }
+      -webkit-transform: translate(7.9em, 7em) rotate(0);
+          -ms-transform: translate(7.9em, 7em) rotate(0);
+              transform: translate(7.9em, 7em) rotate(0);
+      -webkit-transition-duration: 1.6s;
+           -o-transition-duration: 1.6s;
+              transition-duration: 1.6s; }
+    .lessons__znatok:hover:before {
+      -webkit-transform: translate(7.9em, 7em) rotate(30deg);
+          -ms-transform: translate(7.9em, 7em) rotate(30deg);
+              transform: translate(7.9em, 7em) rotate(30deg); }
   .lessons__radio {
     position: relative;
     margin-bottom: 24em; }
@@ -650,9 +657,16 @@ ul li {
       background-repeat: no-repeat;
       left: 0;
       bottom: 0;
-      -webkit-transform: translate(34em, 16em);
-          -ms-transform: translate(34em, 16em);
-              transform: translate(34em, 16em); }
+      -webkit-transform: translate(34em, 16em) rotate(0);
+          -ms-transform: translate(34em, 16em) rotate(0);
+              transform: translate(34em, 16em) rotate(0);
+      -webkit-transition-duration: 1.6s;
+           -o-transition-duration: 1.6s;
+              transition-duration: 1.6s; }
+    .lessons__radio:hover:before {
+      -webkit-transform: translate(34em, 16em) rotate(30deg);
+          -ms-transform: translate(34em, 16em) rotate(30deg);
+              transform: translate(34em, 16em) rotate(30deg); }
   .lessons__tools {
     position: relative;
     margin-bottom: 22.5em; }
@@ -666,9 +680,16 @@ ul li {
       background-repeat: no-repeat;
       left: 0;
       bottom: 0;
-      -webkit-transform: translate(30.5em, 18.5em);
-          -ms-transform: translate(30.5em, 18.5em);
-              transform: translate(30.5em, 18.5em); }
+      -webkit-transform: translate(30.5em, 18.5em) rotate(0);
+          -ms-transform: translate(30.5em, 18.5em) rotate(0);
+              transform: translate(30.5em, 18.5em) rotate(0);
+      -webkit-transition-duration: 1.6s;
+           -o-transition-duration: 1.6s;
+              transition-duration: 1.6s; }
+    .lessons__tools:hover:before {
+      -webkit-transform: translate(30.5em, 18.5em) rotate(30deg);
+          -ms-transform: translate(30.5em, 18.5em) rotate(30deg);
+              transform: translate(30.5em, 18.5em) rotate(30deg); }
   .lessons__blender {
     position: relative;
     margin-bottom: 24em; }
@@ -682,9 +703,19 @@ ul li {
       background-repeat: no-repeat;
       left: 0;
       bottom: 0;
-      -webkit-transform: translate(8.5em, 25.5em);
-          -ms-transform: translate(8.5em, 25.5em);
-              transform: translate(8.5em, 25.5em); }
+      -webkit-transform: translate(8.5em, 25.5em) rotate(0);
+          -ms-transform: translate(8.5em, 25.5em) rotate(0);
+              transform: translate(8.5em, 25.5em) rotate(0);
+      -webkit-transition-duration: 1.6s;
+           -o-transition-duration: 1.6s;
+              transition-duration: 1.6s; }
+    .lessons__blender:hover:before {
+      -webkit-transform: translate(8.5em, 25.5em) rotate(30deg);
+          -ms-transform: translate(8.5em, 25.5em) rotate(30deg);
+              transform: translate(8.5em, 25.5em) rotate(30deg); }
+  .lessons__znatok:before, .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
+    -webkit-background-size: contain;
+            background-size: contain; }
 
 /* -------------------------------------------------------------------------- */
 /* Lessons Responsive */
@@ -698,25 +729,6 @@ ul li {
     .lessons__img_tools, .lessons__img_blender {
       width: 55em;
       height: 38em; }
-    .lessons__img_znatok, .lessons__img_tools {
-      -webkit-transform: translateX(0.5em);
-          -ms-transform: translateX(0.5em);
-              transform: translateX(0.5em); }
-    .lessons__img_radio, .lessons__img_blender {
-      -webkit-transform: translateX(-0.5em);
-          -ms-transform: translateX(-0.5em);
-              transform: translateX(-0.5em); }
-    .lessons__text_znatok, .lessons__text_tools {
-      -webkit-transform: translateX(-0.5em);
-          -ms-transform: translateX(-0.5em);
-              transform: translateX(-0.5em); }
-    .lessons__text_radio, .lessons__text_blender {
-      -webkit-transform: translateX(0.5em);
-          -ms-transform: translateX(0.5em);
-              transform: translateX(0.5em); }
-    .lessons__znatok:before, .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
-      -webkit-background-size: contain;
-              background-size: contain; }
     .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
       width: 54em;
       height: 60em; }
@@ -724,10 +736,18 @@ ul li {
       -webkit-transform: translate(28em, 0);
           -ms-transform: translate(28em, 0);
               transform: translate(28em, 0); }
+    .lessons__radio:hover:before {
+      -webkit-transform: translate(28em, 0) rotate(30deg);
+          -ms-transform: translate(28em, 0) rotate(30deg);
+              transform: translate(28em, 0) rotate(30deg); }
     .lessons__tools:before, .lessons__blender:before {
       -webkit-transform: translate(26em, 10em);
           -ms-transform: translate(26em, 10em);
-              transform: translate(26em, 10em); } }
+              transform: translate(26em, 10em); }
+    .lessons__tools:hover:before, .lessons__blender:hover:before {
+      -webkit-transform: translate(26em, 10em) rotate(30deg);
+          -ms-transform: translate(26em, 10em) rotate(30deg);
+              transform: translate(26em, 10em) rotate(30deg); } }
 
 @media (max-width: 1180px) {
   .lessons__img_radio {
@@ -748,6 +768,20 @@ ul li {
   .lessons__radio:before, .lessons__tools:before, .lessons__blender:before {
     width: 54em;
     height: 50em; } }
+
+@media (max-width: 992px) {
+  .lessons__znatok:hover:before {
+    -webkit-transform: translate(7.9em, 7em) rotate(0);
+        -ms-transform: translate(7.9em, 7em) rotate(0);
+            transform: translate(7.9em, 7em) rotate(0); }
+  .lessons__radio:hover:before {
+    -webkit-transform: translate(28em, 0) rotate(0);
+        -ms-transform: translate(28em, 0) rotate(0);
+            transform: translate(28em, 0) rotate(0); }
+  .lessons__tools:hover:before, .lessons__blender:hover:before {
+    -webkit-transform: translate(26em, 10em) rotate(0);
+        -ms-transform: translate(26em, 10em) rotate(0);
+            transform: translate(26em, 10em) rotate(0); } }
 
 @media (max-width: 920px) {
   .lessons__cards {
@@ -804,7 +838,10 @@ ul li {
     text-align: center;
     margin: 0 auto 3.1em; }
   .features__block {
-    margin: 0 auto 8em; }
+    margin: 0 auto 8em;
+    -webkit-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s; }
   .features__text {
     position: absolute;
     z-index: 2;
@@ -840,13 +877,16 @@ ul li {
           -ms-transform: translate(1.4em, 4.8em);
               transform: translate(1.4em, 4.8em); }
     .features__text_teachers {
-      -webkit-transform: translate(6em, 3.4em);
-          -ms-transform: translate(6em, 3.4em);
-              transform: translate(6em, 3.4em); }
+      -webkit-transform: translate(9em, 3.4em);
+          -ms-transform: translate(9em, 3.4em);
+              transform: translate(9em, 3.4em); }
   .features__bgmark {
     position: relative;
     z-index: 1;
-    display: inline-block; }
+    display: inline-block;
+    -webkit-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s; }
     .features__bgmark_100students {
       -webkit-transform: translate(-6em, 0);
           -ms-transform: translate(-6em, 0);
@@ -888,9 +928,37 @@ ul li {
             -ms-transform: translateX(-8.7em);
                 transform: translateX(-8.7em); }
     .features__bgmark_teachers {
-      -webkit-transform: translateX(8em);
-          -ms-transform: translateX(8em);
-              transform: translateX(8em); }
+      -webkit-transform: translateX(15em);
+          -ms-transform: translateX(15em);
+              transform: translateX(15em); }
+  .features__fiveYears:hover .features__bgmark_fiveYears {
+    -webkit-transform: scale(1.12);
+        -ms-transform: scale(1.12);
+            transform: scale(1.12); }
+  .features__100students:hover .features__bgmark_100students {
+    -webkit-transform: translate(-6em, 0) scale(1.12);
+        -ms-transform: translate(-6em, 0) scale(1.12);
+            transform: translate(-6em, 0) scale(1.12); }
+  .features__minigroup:hover .features__bgmark_minigroup {
+    -webkit-transform: translate(-3em, 0) scale(1.12);
+        -ms-transform: translate(-3em, 0) scale(1.12);
+            transform: translate(-3em, 0) scale(1.12); }
+  .features__topPlaces:hover .features__bgmark_topPlaces {
+    -webkit-transform: translate(0.5em, -7em) scale(1.12);
+        -ms-transform: translate(0.5em, -7em) scale(1.12);
+            transform: translate(0.5em, -7em) scale(1.12); }
+  .features__famAtm:hover .features__bgmark_famAtm {
+    -webkit-transform: translate(12em, 0) scale(1.12);
+        -ms-transform: translate(12em, 0) scale(1.12);
+            transform: translate(12em, 0) scale(1.12); }
+  .features__courses:hover .features__bgmark_courses {
+    -webkit-transform: translate(2.7em, 0) scale(1.12);
+        -ms-transform: translate(2.7em, 0) scale(1.12);
+            transform: translate(2.7em, 0) scale(1.12); }
+  .features__teachers:hover .features__bgmark_teachers {
+    -webkit-transform: translateX(15em) scale(1.12);
+        -ms-transform: translateX(15em) scale(1.12);
+            transform: translateX(15em) scale(1.12); }
 
 /* ---------------------------------------------------------- */
 /* Features Responsive */
@@ -913,64 +981,90 @@ ul li {
   .features__text {
     position: static; }
     .features__text_fiveYears {
-      -webkit-transform: translate(-1.8em, 2.6em);
-          -ms-transform: translate(-1.8em, 2.6em);
-              transform: translate(-1.8em, 2.6em); }
+      -webkit-transform: translate(-0.5em, 2.6em);
+          -ms-transform: translate(-0.5em, 2.6em);
+              transform: translate(-0.5em, 2.6em); }
     .features__text_100students {
-      -webkit-transform: translate(-8.3em, 2.7em);
-          -ms-transform: translate(-8.3em, 2.7em);
-              transform: translate(-8.3em, 2.7em); }
+      -webkit-transform: translate(-5.2em, 2.7em);
+          -ms-transform: translate(-5.2em, 2.7em);
+              transform: translate(-5.2em, 2.7em); }
     .features__text_minigroup {
-      -webkit-transform: translate(-6.3em, 2.5em);
-          -ms-transform: translate(-6.3em, 2.5em);
-              transform: translate(-6.3em, 2.5em); }
+      -webkit-transform: translate(-2.8em, 2em);
+          -ms-transform: translate(-2.8em, 2em);
+              transform: translate(-2.8em, 2em); }
     .features__text_topPlaces {
-      -webkit-transform: translate(-11.8em, 2.2em);
-          -ms-transform: translate(-11.8em, 2.2em);
-              transform: translate(-11.8em, 2.2em);
+      -webkit-transform: translate(-8.8em, 2.2em);
+          -ms-transform: translate(-8.8em, 2.2em);
+              transform: translate(-8.8em, 2.2em);
       max-width: 16em; }
     .features__text_famAtm {
-      -webkit-transform: translate(-5.5em, 7em);
-          -ms-transform: translate(-5.5em, 7em);
-              transform: translate(-5.5em, 7em); }
-    .features__text_minigroup {
-      -webkit-transform: translate(-3.7em, 2em);
-          -ms-transform: translate(-3.7em, 2em);
-              transform: translate(-3.7em, 2em); }
+      -webkit-transform: translate(-4em, 7em);
+          -ms-transform: translate(-4em, 7em);
+              transform: translate(-4em, 7em); }
     .features__text_courses {
-      -webkit-transform: translate(-17.1em, 6.9em);
-          -ms-transform: translate(-17.1em, 6.9em);
-              transform: translate(-17.1em, 6.9em); }
-    .features__text_topPlaces {
-      -webkit-transform: translate(-10.2em, 2.2em);
-          -ms-transform: translate(-10.2em, 2.2em);
-              transform: translate(-10.2em, 2.2em); }
+      -webkit-transform: translate(-15em, 6.9em);
+          -ms-transform: translate(-15em, 6.9em);
+              transform: translate(-15em, 6.9em); }
     .features__text_teachers {
       -webkit-transform: translate(-0.1em, 5.8em);
           -ms-transform: translate(-0.1em, 5.8em);
               transform: translate(-0.1em, 5.8em); }
-  .features__bgmark {
-    position: static; }
-    .features__bgmark_famAtm {
-      -webkit-transform: translate(4em, 4.8em);
-          -ms-transform: translate(4em, 4.8em);
-              transform: translate(4em, 4.8em); }
-    .features__bgmark_courses {
-      -webkit-transform: translate(1em, 4.8em);
-          -ms-transform: translate(1em, 4.8em);
-              transform: translate(1em, 4.8em); }
-    .features__bgmark_minigroup {
-      -webkit-transform: translate(3em, -1em);
-          -ms-transform: translate(3em, -1em);
-              transform: translate(3em, -1em); }
-    .features__bgmark_topPlaces {
-      -webkit-transform: translate(4em, -7em);
-          -ms-transform: translate(4em, -7em);
-              transform: translate(4em, -7em); }
-    .features__bgmark_teachers {
-      -webkit-transform: translate(5.4em, 4.8em);
-          -ms-transform: translate(5.4em, 4.8em);
-              transform: translate(5.4em, 4.8em); } }
+  .features__bgmark_fiveYears {
+    -webkit-transform: translate(2.2em, 0);
+        -ms-transform: translate(2.2em, 0);
+            transform: translate(2.2em, 0); }
+  .features__bgmark_100students {
+    -webkit-transform: translate(0.5em, 0);
+        -ms-transform: translate(0.5em, 0);
+            transform: translate(0.5em, 0); }
+  .features__bgmark_minigroup {
+    -webkit-transform: translate(6em, -1em);
+        -ms-transform: translate(6em, -1em);
+            transform: translate(6em, -1em); }
+  .features__bgmark_topPlaces {
+    -webkit-transform: translate(9em, -7em);
+        -ms-transform: translate(9em, -7em);
+            transform: translate(9em, -7em); }
+  .features__bgmark_famAtm {
+    -webkit-transform: translate(8em, 4.8em);
+        -ms-transform: translate(8em, 4.8em);
+            transform: translate(8em, 4.8em); }
+  .features__bgmark_courses {
+    -webkit-transform: translate(6em, 4.5em);
+        -ms-transform: translate(6em, 4.5em);
+            transform: translate(6em, 4.5em); }
+  .features__bgmark_teachers {
+    -webkit-transform: translate(5.4em, 4.8em);
+        -ms-transform: translate(5.4em, 4.8em);
+            transform: translate(5.4em, 4.8em); }
+  .features__fiveYears:hover .features__bgmark_fiveYears {
+    -webkit-transform: translate(2.2em, 0) scale(1.12);
+        -ms-transform: translate(2.2em, 0) scale(1.12);
+            transform: translate(2.2em, 0) scale(1.12); }
+  .features__100students:hover .features__bgmark_100students {
+    -webkit-transform: translate(0.5em, 0) scale(1.12);
+        -ms-transform: translate(0.5em, 0) scale(1.12);
+            transform: translate(0.5em, 0) scale(1.12); }
+  .features__minigroup:hover .features__bgmark_minigroup {
+    -webkit-transform: translate(6em, -1em) scale(1.12);
+        -ms-transform: translate(6em, -1em) scale(1.12);
+            transform: translate(6em, -1em) scale(1.12); }
+  .features__topPlaces:hover .features__bgmark_topPlaces {
+    -webkit-transform: translate(9em, -7em) scale(1.12);
+        -ms-transform: translate(9em, -7em) scale(1.12);
+            transform: translate(9em, -7em) scale(1.12); }
+  .features__famAtm:hover .features__bgmark_famAtm {
+    -webkit-transform: translate(8em, 4.8em) scale(1.12);
+        -ms-transform: translate(8em, 4.8em) scale(1.12);
+            transform: translate(8em, 4.8em) scale(1.12); }
+  .features__courses:hover .features__bgmark_courses {
+    -webkit-transform: translate(6em, 4.5em) scale(1.12);
+        -ms-transform: translate(6em, 4.5em) scale(1.12);
+            transform: translate(6em, 4.5em) scale(1.12); }
+  .features__teachers:hover .features__bgmark_teachers {
+    -webkit-transform: translate(5.4em, 4.8em) scale(1.12);
+        -ms-transform: translate(5.4em, 4.8em) scale(1.12);
+            transform: translate(5.4em, 4.8em) scale(1.12); } }
 
 @media (max-width: 992px) {
   .features__fiveYears {
@@ -985,6 +1079,30 @@ ul li {
     margin: 0 auto 18em; }
   .features__courses {
     margin: 0 auto 9em; }
+  .features__text_fiveYears {
+    -webkit-transform: translate(0.6em, 2.6em);
+        -ms-transform: translate(0.6em, 2.6em);
+            transform: translate(0.6em, 2.6em); }
+  .features__text_100students {
+    -webkit-transform: translate(-2.8em, 2.7em);
+        -ms-transform: translate(-2.8em, 2.7em);
+            transform: translate(-2.8em, 2.7em); }
+  .features__text_minigroup {
+    -webkit-transform: translate(-2.3em, 2.5em);
+        -ms-transform: translate(-2.3em, 2.5em);
+            transform: translate(-2.3em, 2.5em); }
+  .features__text_topPlaces {
+    -webkit-transform: translate(-6em, 2.2em);
+        -ms-transform: translate(-6em, 2.2em);
+            transform: translate(-6em, 2.2em); }
+  .features__text_famAtm {
+    -webkit-transform: translate(-3em, 7em);
+        -ms-transform: translate(-3em, 7em);
+            transform: translate(-3em, 7em); }
+  .features__text_courses {
+    -webkit-transform: translate(-10.8em, 4.6em);
+        -ms-transform: translate(-10.8em, 4.6em);
+            transform: translate(-10.8em, 4.6em); }
   .features__bgmark_fiveYears {
     -webkit-transform: translateX(5em);
         -ms-transform: translateX(5em);
@@ -1009,30 +1127,34 @@ ul li {
     -webkit-transform: translate(15em, 0);
         -ms-transform: translate(15em, 0);
             transform: translate(15em, 0); }
-  .features__text_fiveYears {
-    -webkit-transform: translate(0.6em, 2.6em);
-        -ms-transform: translate(0.6em, 2.6em);
-            transform: translate(0.6em, 2.6em); }
-  .features__text_100students {
-    -webkit-transform: translate(-2.8em, 2.7em);
-        -ms-transform: translate(-2.8em, 2.7em);
-            transform: translate(-2.8em, 2.7em); }
-  .features__text_minigroup {
-    -webkit-transform: translate(-2.3em, 2.5em);
-        -ms-transform: translate(-2.3em, 2.5em);
-            transform: translate(-2.3em, 2.5em); }
-  .features__text_topPlaces {
-    -webkit-transform: translate(-6em, 2.2em);
-        -ms-transform: translate(-6em, 2.2em);
-            transform: translate(-6em, 2.2em); }
-  .features__text_famAtm {
-    -webkit-transform: translate(-3em, 7em);
-        -ms-transform: translate(-3em, 7em);
-            transform: translate(-3em, 7em); }
-  .features__text_courses {
-    -webkit-transform: translate(-10.8em, 4.6em);
-        -ms-transform: translate(-10.8em, 4.6em);
-            transform: translate(-10.8em, 4.6em); } }
+  .features__fiveYears:hover .features__bgmark_fiveYears {
+    -webkit-transform: translateX(5em) scale(1);
+        -ms-transform: translateX(5em) scale(1);
+            transform: translateX(5em) scale(1); }
+  .features__100students:hover .features__bgmark_100students {
+    -webkit-transform: translateX(6em) scale(1);
+        -ms-transform: translateX(6em) scale(1);
+            transform: translateX(6em) scale(1); }
+  .features__minigroup:hover .features__bgmark_minigroup {
+    -webkit-transform: translateX(6em) scale(1);
+        -ms-transform: translateX(6em) scale(1);
+            transform: translateX(6em) scale(1); }
+  .features__topPlaces:hover .features__bgmark_topPlaces {
+    -webkit-transform: translate(16em, -7em) scale(1);
+        -ms-transform: translate(16em, -7em) scale(1);
+            transform: translate(16em, -7em) scale(1); }
+  .features__famAtm:hover .features__bgmark_famAtm {
+    -webkit-transform: translate(11em, 5em) scale(1);
+        -ms-transform: translate(11em, 5em) scale(1);
+            transform: translate(11em, 5em) scale(1); }
+  .features__courses:hover .features__bgmark_courses {
+    -webkit-transform: translate(15em, 0) scale(1);
+        -ms-transform: translate(15em, 0) scale(1);
+            transform: translate(15em, 0) scale(1); }
+  .features__teachers:hover .features__bgmark_teachers {
+    -webkit-transform: translate(5.4em, 4.8em) scale(1);
+        -ms-transform: translate(5.4em, 4.8em) scale(1);
+            transform: translate(5.4em, 4.8em) scale(1); } }
 
 @media (max-width: 460px) {
   .features__title {
