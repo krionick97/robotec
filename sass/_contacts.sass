@@ -13,7 +13,6 @@
     position: absolute
     display: block
     width: 113em
-    height: 58.9em
     top: 11.4em
     padding: 4em 7.2em 7.5em
     left: 50%
@@ -97,3 +96,41 @@
     height: 13em
     text-overflow: clip
     resize: none
+
+/* -------------------------- */
+/* Contacts Responsive */
+@media (max-width: 1150px)
+  .contacts
+    margin-bottom: 60em
+    &__card
+      width: 53em
+      transform: translateX(-50%)
+      flex-direction: column
+      // align-items: center
+      padding: 6em 4em
+      &_left
+        margin-bottom: 2em
+    &__map
+      width: 100%
+    &__subtitle
+      text-align: center
+      margin: 1em 0 1em
+    &__form
+      width: 100%
+
+@media (max-width: 550px)
+  .contacts
+    margin-bottom: 36em
+    &__card
+      width: 90%
+    &__data
+      flex-direction: column
+    &__map
+      display: none
+    &__text:not(:last-child)
+      margin-bottom: 2.2em
+    &__descr
+      font-size: 1.6em
+    &__subtitle
+      font-size: 2em
+      margin: 0 0 1em

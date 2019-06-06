@@ -172,11 +172,13 @@
             transform: translateX(-5%); } }
 
 @media (max-width: 640px) {
-  .bg_container:before {
-    left: 0;
-    -webkit-transform: translateX(-35%);
-        -ms-transform: translateX(-35%);
-            transform: translateX(-35%); } }
+  .bg_container {
+    background-image: url(../img/bg/main_bg_4.png); }
+    .bg_container:before {
+      left: 0;
+      -webkit-transform: translateX(-35%);
+          -ms-transform: translateX(-35%);
+              transform: translateX(-35%); } }
 
 @media (max-width: 600px) {
   .bg_container:before {
@@ -1184,7 +1186,6 @@ ul li {
     position: absolute;
     display: block;
     width: 113em;
-    height: 58.9em;
     top: 11.4em;
     padding: 4em 7.2em 7.5em;
     left: 50%;
@@ -1283,6 +1284,53 @@ ul li {
     -o-text-overflow: clip;
        text-overflow: clip;
     resize: none; }
+
+/* -------------------------- */
+/* Contacts Responsive */
+@media (max-width: 1150px) {
+  .contacts {
+    margin-bottom: 60em; }
+    .contacts__card {
+      width: 53em;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 6em 4em; }
+      .contacts__card_left {
+        margin-bottom: 2em; }
+    .contacts__map {
+      width: 100%; }
+    .contacts__subtitle {
+      text-align: center;
+      margin: 1em 0 1em; }
+    .contacts__form {
+      width: 100%; } }
+
+@media (max-width: 550px) {
+  .contacts {
+    margin-bottom: 36em; }
+    .contacts__card {
+      width: 90%; }
+    .contacts__data {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .contacts__map {
+      display: none; }
+    .contacts__text:not(:last-child) {
+      margin-bottom: 2.2em; }
+    .contacts__descr {
+      font-size: 1.6em; }
+    .contacts__subtitle {
+      font-size: 2em;
+      margin: 0 0 1em; } }
 
 .footer {
   max-width: 192.5em;
