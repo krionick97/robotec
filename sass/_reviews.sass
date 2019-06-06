@@ -52,7 +52,7 @@
 .arrow
   position: absolute
   width: 10.4em
-  height: 3.2em
+  height: 3em
   bottom: -5em
   z-index: 2
   background-repeat: no-repeat
@@ -60,10 +60,58 @@
   &:hover
     cursor: pointer
   &_prev
-    left: 0
-    transform: translateX(46em)
+    left: 50%
+    transform: translateX(-19.7em)
     background-image: url('../img/arrow_left.svg')
   &_next
-    right: 0
-    transform: translateX(-46.2em)
-    background-image: url('../img/arrow_right.svg')
+    left: 50%
+    background-image: url('../img/arrow_left.svg')
+    transform: rotate(180deg) translateX(-8.6em)
+
+/* ------------------------------------------------------------------- */
+/* Reveiws Responsive */
+
+
+@media (max-width: 992px)
+  .reviews
+    &__photo
+      box-shadow: none
+
+@media (max-width: 890px)
+  .reviews
+    &__photo
+      background-image: none
+      width: 49em
+
+@media (max-width: 580px)
+  .arrow
+    width: 6em
+    &_prev
+      transform: translateX(-13em)
+    &_next
+      transform: rotate(180deg) translateX(-7.2em)
+  .reviews
+    &__content
+      padding: 8em 7em
+    &__photo
+      width: 40em
+
+@media (max-width: 485px)
+  .reviews
+    &__content
+      padding: 6em 4em
+    &__photo
+      width: 30em
+      height: 28em
+    &__subtitle
+      font-size: 2.2em
+      margin-bottom: 1em
+    &__text
+      font-size: 1.8em
+
+@media (max-width: 380px)
+  .reviews
+    &__content
+      padding: 4em 3em
+    &__photo
+      width: 23.6em

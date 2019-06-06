@@ -1102,7 +1102,7 @@ ul li {
 .arrow {
   position: absolute;
   width: 10.4em;
-  height: 3.2em;
+  height: 3em;
   bottom: -5em;
   z-index: 2;
   background-repeat: no-repeat;
@@ -1110,17 +1110,63 @@ ul li {
   .arrow:hover {
     cursor: pointer; }
   .arrow_prev {
-    left: 0;
-    -webkit-transform: translateX(46em);
-        -ms-transform: translateX(46em);
-            transform: translateX(46em);
+    left: 50%;
+    -webkit-transform: translateX(-19.7em);
+        -ms-transform: translateX(-19.7em);
+            transform: translateX(-19.7em);
     background-image: url("../img/arrow_left.svg"); }
   .arrow_next {
-    right: 0;
-    -webkit-transform: translateX(-46.2em);
-        -ms-transform: translateX(-46.2em);
-            transform: translateX(-46.2em);
-    background-image: url("../img/arrow_right.svg"); }
+    left: 50%;
+    background-image: url("../img/arrow_left.svg");
+    -webkit-transform: rotate(180deg) translateX(-8.6em);
+        -ms-transform: rotate(180deg) translateX(-8.6em);
+            transform: rotate(180deg) translateX(-8.6em); }
+
+/* ------------------------------------------------------------------- */
+/* Reveiws Responsive */
+@media (max-width: 992px) {
+  .reviews__photo {
+    -webkit-box-shadow: none;
+            box-shadow: none; } }
+
+@media (max-width: 890px) {
+  .reviews__photo {
+    background-image: none;
+    width: 49em; } }
+
+@media (max-width: 580px) {
+  .arrow {
+    width: 6em; }
+    .arrow_prev {
+      -webkit-transform: translateX(-13em);
+          -ms-transform: translateX(-13em);
+              transform: translateX(-13em); }
+    .arrow_next {
+      -webkit-transform: rotate(180deg) translateX(-7.2em);
+          -ms-transform: rotate(180deg) translateX(-7.2em);
+              transform: rotate(180deg) translateX(-7.2em); }
+  .reviews__content {
+    padding: 8em 7em; }
+  .reviews__photo {
+    width: 40em; } }
+
+@media (max-width: 485px) {
+  .reviews__content {
+    padding: 6em 4em; }
+  .reviews__photo {
+    width: 30em;
+    height: 28em; }
+  .reviews__subtitle {
+    font-size: 2.2em;
+    margin-bottom: 1em; }
+  .reviews__text {
+    font-size: 1.8em; } }
+
+@media (max-width: 380px) {
+  .reviews__content {
+    padding: 4em 3em; }
+  .reviews__photo {
+    width: 23.6em; } }
 
 /* ------------------------------------------------------------ */
 /* Contacts and form */
